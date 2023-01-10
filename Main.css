@@ -1,0 +1,275 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: black;
+    color: white;
+    text-align: center;
+}
+
+/* voor Chrome, safari en opera verwijderd de scrollbar
+maar je kan nog steeds scollen */
+::-webkit-scrollbar {
+    display: none;
+}
+
+.nav nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav nav a {
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.nav nav ul {
+    text-decoration: none;
+    padding: 0 5px;
+}
+
+.nav a {
+    padding: 8px;
+    display: block;
+}
+
+.nav ul {
+    background: black;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+.nav li {
+    color: white;
+    background: black;
+    display: block;
+    float: left;
+    padding: 1rem;
+    position: relative;
+    text-decoration: none;
+    transition-duration: 0.5s;
+}
+
+.nav li a {
+    color: white;
+    height: 100%;
+    width: 100%;
+}
+
+/* ---- dropdown navbar ---- */
+.nav ul li ul {
+    background: black;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    transition: all 0.5s ease;
+    margin-top: 1rem;
+    left: 0;
+    display: none;
+}
+
+.nav ul li:hover>ul,
+ul li ul:hover {
+    color: black;
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+.nav ul li ul li {
+    clear: both;
+    width: 100%;
+    z-index: 3000;
+}
+
+/* ---- Links ---- */
+a:link {
+    text-decoration: none;
+    color: #457b9d;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #a2d2ff;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+article {
+    font-size: larger;
+    height: 40%;
+}
+
+header {
+    font-size: xx-large;
+    background-size: cover;
+    width: 100%;
+    height: 70%;
+    display: grid;
+    place-items: center;
+
+}
+
+.a-1 {
+    background: white;
+    color: black;
+    font-size: x-large;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.a-2 {
+    font-size: x-large;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    width: 100%;
+    bottom: 0;
+    height: fit-content;
+}
+
+/* ----- Pong.html ----- */
+.pong-header {
+    font-size: xx-large;
+    background: url("img/PONG.gif");
+    background-size: cover;
+    width: 100%;
+    height: 80vh;
+    display: grid;
+    place-items: center;
+}
+
+.pong-header a {
+    color: white;
+    border-radius: 4px;
+    background: #457b9d;
+    background-size: 300px 400px;
+}
+
+.pong-header a:link {
+    text-decoration: none;
+}
+
+.pong-header a:visited {
+    text-decoration: none;
+    background: #a2d2ff;
+}
+
+.pong-header a:hover {
+    text-decoration: none;
+    background: #a2d2ff;
+}
+
+.pong-header a:active {
+    text-decoration: none;
+}
+
+.pong-wrapper {
+    /* ----- info kaart ----- */
+    /* Wordt gebruikt in Pong.html en OverOns.html */
+    background: white;
+    height: 650px;
+    color: black;
+    font-size: x-large;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.kaart {
+    height: 450px;
+    width: 300px;
+    background-color: black;
+    border-radius: 6px;
+    position: relative;
+    display: flex;
+    text-align: center;
+    margin: 0 25px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all .5s ease-in-out;
+}
+
+.kaart a {
+    text-decoration: none;
+    background: white;
+    display: inline-block;
+    width: 150px;
+    margin: 15 auto;
+    padding: 15px;
+    color: black;
+    font-size: 16px;
+    text-transform: uppercase;
+    border-radius: 50px;
+    opacity: .2;
+    transition: all .5 ease-in-out;
+}
+
+
+.content {
+    color: white;
+    position: relative;
+    font: 20px;
+    margin: 20px 15px;
+    line-height: 30px;
+    transition: all .5s ease-in-out;
+}
+
+.kaart:hover {
+    box-shadow: 0 10px 10px 2px rgba(0, 0, 0, 0.1);
+    transform: translate(-7px);
+}
+
+.kaart:hover .content {
+    color: #457b9d;
+}
+
+.kaart:hover a {
+    opacity: 1;
+}
+
+@media (max-width: 600px) {
+    .wrapper {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .kaart {
+        margin-bottom: 30px;
+    }
+
+    .content {
+        font-size: 15px;
+    }
+}
+
+/* ----- OverOns.html ----- */
+/* header van de OverOns pagina */
+.OV {
+    background: url(img/OverOns-header.gif);
+    background-position: center;
+    min-height: 80vh;
+}
